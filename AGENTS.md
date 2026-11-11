@@ -7,7 +7,7 @@ Este documento estabelece as regras de conduta técnica, governança de código,
 ## 1. Missão do Projeto & Identidade
 
 * **Proprietário:** Saimon Furigo (`@Shxsaimon`).
-* **Objetivo:** Portfólio pessoal e vitrine de engenharia de software focado em demonstrar competências de **Full Stack & UX/UI**, unindo sensibilidade estética em interfaces a sistemas resilientes de ponta a ponta.
+* **Objetivo:** Portfólio pessoal e vitrine de engenharia de software focado em demonstrar competências de **Desenvolvedor de Software & UX/UI**, unindo sensibilidade estética em interfaces a sistemas resilientes de ponta a ponta.
 * **Projetos Principais:**
   * **Symo Finance (Destaque Principal):** Plataforma de gestão financeira pessoal e empresarial em PHP 8 MVC nativo, transações atômicas (ACID), PostgreSQL no Neon (PgBouncer/SSL) e Vercel Serverless.
   * **Landing Page No Man's Sky (Carrossel):** Primeiro projeto web temático (HTML5, CSS3, JS Vanilla, design imersivo responsivo).

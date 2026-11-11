@@ -7,7 +7,7 @@
 ## 1. Visão Geral & Posicionamento
 
 * **Nome do Profissional:** Saimon Furigo
-* **Perfil:** Desenvolvedor Full Stack com forte paixão e aptidão por Front-end, Design Systems e refinamento de UX/UI, combinado a uma visão holística de arquitetura de software de ponta a ponta (regras de negócio, segurança, bancos relacionais, concorrência atômica, serverless, CI/CD e infraestrutura).
+* **Perfil:** Desenvolvedor de Software com forte paixão e aptidão por Front-end, Design Systems e refinamento de UX/UI, combinado a uma visão holística de arquitetura de software de ponta a ponta (regras de negócio, segurança, bancos relacionais, concorrência atômica, serverless, CI/CD e infraestrutura).
 * **Links Oficiais:**
   * GitHub: [github.com/Shxsaimon](https://github.com/Shxsaimon)
   * LinkedIn: [linkedin.com/in/saimonfurigo](https://www.linkedin.com/in/saimonfurigo/)
@@ -38,7 +38,7 @@ A navegação segue uma narrativa fluida de cima para baixo em 5 seções estrat
 - **Navbar Fixa Translúcida:** Logotipo textual (`SF` ou `Saimon.dev`), links de âncora (*Projetos*, *Arsenal*, *Contato*) e botão de ação rápida (*Disponível para novos projetos*).
 - **Hero Section:**
   - Tag pill: `● Aberto a novos desafios & oportunidades`
-  - Headline de impacto: *Desenvolvedor Full Stack focado em interfaces elegantes e arquitetura robusta de ponta a ponta.*
+  - Headline de impacto: *Desenvolvedor de Software focado em interfaces elegantes e arquitetura robusta de ponta a ponta.*
   - Subtítulo: Focado na ponte entre UX/UI refinado e engenharia sólida (PHP 8 MVC nativo, PostgreSQL, JavaScript moderno e pipelines em nuvem).
   - CTAs Primários: Botão com gradiente `[Explorar Projetos]` e botões secundários `[GitHub]` e `[LinkedIn]`.
 
