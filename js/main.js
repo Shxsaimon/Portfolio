@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initDeviceSwitcher();
   initProjectsCarousel();
   initClipboardEmail();
+  initDesktopMagnifier();
 });
 
 /**
@@ -106,5 +107,28 @@ function initClipboardEmail() {
     }).catch(err => {
       console.error('Falha ao copiar:', err);
     });
+  });
+}
+
+/**
+ * 4. Lupa Interativa (Zoom Localizado no Cursor do Mockup Desktop)
+ */
+function initDesktopMagnifier() {
+  const container = document.getElementById('symo-zoom-container');
+  const img = document.getElementById('symo-desktop-img');
+
+  if (!container || !img) return;
+
+  container.addEventListener('mousemove', (e) => {
+    const rect = container.getBoundingClientRect();
+    const x = ((e.clientX - rect.left) / rect.width) * 100;
+    const y = ((e.clientY - rect.top) / rect.height) * 100;
+    img.style.transformOrigin = `${x}% ${y}%`;
+    img.style.transform = 'scale(1.9)';
+  });
+
+  container.addEventListener('mouseleave', () => {
+    img.style.transformOrigin = 'center center';
+    img.style.transform = 'scale(1)';
   });
 }
