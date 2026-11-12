@@ -28,18 +28,18 @@ A navegação segue uma narrativa fluida de cima para baixo em 5 seções estrat
 ├────────────────────────────────────────────────────────────────────────┤
 │ [3] OUTROS PROJETOS: Carrossel Horizontal Estilo Streaming / Slider    │
 ├────────────────────────────────────────────────────────────────────────┤
-│ [4] ARSENAL TÉCNICO: Skills por Camadas (Front/UX, Back, Banco, DevOps)│
+│ [4] HABILIDADES TÉCNICAS: Skills por Camadas (Front/UX, Back, Banco, DevOps) │
 ├────────────────────────────────────────────────────────────────────────┤
 │ [5] FOOTER: Status de Disponibilidade + Cópia de E-mail em 1 Clique    │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Seção 1: Header & Hero ("Sobre Mim")
-- **Navbar Fixa Translúcida:** Logotipo textual (`SF` ou `Saimon.dev`), links de âncora (*Projetos*, *Arsenal*, *Contato*) e botão de ação rápida (*Disponível para novos projetos*).
+- **Navbar Fixa Translúcida:** Logotipo textual (`SF` ou `Saimon.dev`), links de âncora (*Projetos*, *Habilidades*, *Contato*) e botão de ação rápida (*Disponível para novos projetos*).
 - **Hero Section:**
   - Tag pill: `● Aberto a novos desafios & oportunidades`
   - Headline de impacto: *Desenvolvedor de Software focado em interfaces elegantes e arquitetura robusta de ponta a ponta.*
-  - Subtítulo: Focado na ponte entre UX/UI refinado e engenharia sólida (PHP 8 MVC nativo, PostgreSQL, JavaScript moderno e pipelines em nuvem).
+  - Subtítulo: Focado na ponte entre UX/UI refinado e engenharia sólida (PHP 8 com arquitetura MVC, PostgreSQL, JavaScript moderno e pipelines em nuvem).
   - CTAs Primários: Botão com gradiente `[Explorar Projetos]` e botões secundários `[GitHub]` e `[LinkedIn]`.
 
 ### Seção 2: Projeto Carro-Chefe (Symo Finance)
@@ -50,7 +50,7 @@ A navegação segue uma narrativa fluida de cima para baixo em 5 seções estrat
     - Badges flutuantes: *45 Telas Documentadas*, *Concorrência Atômica*, *Zero Framework Lock-in*.
   - **Coluna Técnica (40%):**
     - Título e proposta de valor da plataforma de gestão financeira.
-    - Destaques de engenharia: Arquitetura MVC nativa sem bibliotecas externas, integração com Neon PgBouncer via SSL, auditoria com JSON Diff.
+    - Destaques de engenharia: Arquitetura MVC própria sem bibliotecas externas, integração com Neon PgBouncer via SSL, auditoria com JSON Diff.
     - Botões: `[ Ver Galeria Completa ]` e `[ Testar Protótipo ]`.
 
 ### Seção 3: Outros Projetos Reais (Carrossel Horizontal / Slider)
@@ -59,10 +59,10 @@ A navegação segue uma narrativa fluida de cima para baixo em 5 seções estrat
 - **Card Inicial 1:** **Landing Page No Man's Sky** (Front-end imersivo, vídeo hero background, animações CSS e responsividade fluida).
 - **Cards Futuros / Próximos Projetos:** Espaços modulares reservados para novos produtos full-stack ou freelas.
 
-### Seção 4: Arsenal Técnico & Metodologia
+### Seção 4: Habilidades Técnicas & Metodologia
 Organização em 4 grupos claros para evidenciar o domínio de ponta a ponta:
 1. **Front-end & UX/UI:** HTML5 Semântico, CSS3 Moderno, Design Tokens, JS Vanilla (ES6+), Bootstrap, Acessibilidade (WCAG), Micro-animações.
-2. **Back-end & Arquitetura:** PHP 8.2+ Nativo, Arquitetura MVC, Roteamento HTTP desacoplado, APIs RESTful, Prepared Statements e Defesa em Profundidade.
+2. **Back-end & Arquitetura:** PHP 8+, Arquitetura MVC, Roteamento HTTP desacoplado, APIs RESTful, Prepared Statements e Defesa em Profundidade.
 3. **Bancos de Dados & Dados:** PostgreSQL (Neon Serverless), MySQL, Transações Atômicas (ACID), Modelagem Relacional, Migrations Versionadas.
 4. **DevOps & Cloud:** Vercel (Serverless Deployments), Vercel Blob Storage, Git / GitHub Actions (CI/CD de migrações), GitFlow.
 
