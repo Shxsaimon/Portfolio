@@ -280,13 +280,13 @@
               <!-- DESKTOP BROWSER FRAME (Active by default) -->
               <div class="w-full flex flex-col browser-mockup fade-transition" id="symo-desktop-view">
                 <!-- Windows-Style Browser Titlebar -->
-                <div class="flex items-center justify-between px-3 py-2 bg-surface-container-high border-b border-outline-variant/30">
-                  <div class="bg-surface-container-lowest/80 px-3 py-0.5 rounded text-[11px] font-mono text-outline flex items-center gap-1.5 border border-outline-variant/20">
-                    <span class="material-symbols-outlined text-[12px] text-emerald-400">lock</span>
-                    <span>symo-finance.vercel.app/dashboard</span>
+                <div class="flex items-center justify-between px-2.5 sm:px-3 py-1.5 sm:py-2 bg-surface-container-high border-b border-outline-variant/30 gap-2 overflow-hidden">
+                  <div class="bg-surface-container-lowest/80 px-2 sm:px-3 py-0.5 rounded text-[10px] sm:text-[11px] font-mono text-outline flex items-center gap-1.5 border border-outline-variant/20 min-w-0 max-w-[200px] xs:max-w-[230px] sm:max-w-xs truncate">
+                    <span class="material-symbols-outlined text-[12px] text-emerald-400 shrink-0">lock</span>
+                    <span class="truncate whitespace-nowrap">symo-finance.vercel.app</span>
                   </div>
                   <!-- Windows Window Controls -->
-                  <div class="flex items-center gap-3 text-outline text-xs pr-1 select-none">
+                  <div class="flex items-center gap-2.5 sm:gap-3 text-outline text-xs pr-1 select-none shrink-0">
                     <span class="hover:text-on-surface cursor-default leading-none">─</span>
                     <span class="hover:text-on-surface cursor-default leading-none text-[10px]">▢</span>
                     <span class="hover:text-error cursor-default leading-none">✕</span>
@@ -712,12 +712,12 @@
         <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-8">
           
           <!-- Copy Email Box -->
-          <div class="flex items-center bg-surface-container border border-outline-variant/40 rounded-full p-1.5 pl-4 w-full sm:w-auto shadow-inner">
-            <span class="font-mono text-xs sm:text-sm text-primary mr-3 select-all">
+          <div class="flex items-center justify-between bg-surface-container border border-outline-variant/40 rounded-full p-1.5 pl-3.5 sm:pl-4 w-full sm:w-auto max-w-sm sm:max-w-none shadow-inner gap-2">
+            <span class="font-mono text-[11px] sm:text-xs md:text-sm text-primary select-all truncate min-w-0">
               shxsaimondev@gmail.com
             </span>
             <button 
-              class="px-4 py-2 rounded-full bg-primary-container hover:bg-opacity-90 text-on-primary-container text-xs font-semibold transition-all flex items-center gap-1.5 cursor-pointer" 
+              class="px-3.5 py-2 sm:px-4 rounded-full bg-primary-container hover:bg-opacity-90 text-on-primary-container text-xs font-semibold transition-all flex items-center justify-center gap-1.5 cursor-pointer shrink-0 min-w-[110px]" 
               id="copy-email-btn"
             >
               <span class="material-symbols-outlined text-[16px]" id="copy-icon">content_copy</span>
@@ -810,26 +810,26 @@
 
   <!-- MODAL DE DETALHES DO PROJETO (Native HTML5 Dialog — Obsidian Kinetic) -->
   <dialog class="project-modal" id="project-modal" aria-labelledby="modal-project-title">
-    <div class="glass-panel-elevated rounded-3xl border border-primary/30 p-6 sm:p-8 relative shadow-[0_25px_60px_rgba(0,0,0,0.85)] max-h-[90vh] overflow-y-auto">
+    <div class="glass-panel-elevated rounded-2xl sm:rounded-3xl border border-primary/30 p-4 sm:p-8 relative shadow-[0_25px_60px_rgba(0,0,0,0.85)] w-full max-h-[88vh] max-h-[88dvh] overflow-y-auto overscroll-contain my-auto">
       
       <!-- Close Button -->
       <button 
         id="close-modal-btn" 
         type="button" 
         aria-label="Fechar detalhes do projeto" 
-        class="absolute top-5 right-5 w-9 h-9 rounded-full bg-surface-container border border-outline-variant/30 hover:border-primary text-on-surface-variant hover:text-on-surface flex items-center justify-center transition-all cursor-pointer z-30"
+        class="absolute top-3.5 right-3.5 sm:top-5 sm:right-5 w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-surface-container border border-outline-variant/30 hover:border-primary text-on-surface-variant hover:text-on-surface flex items-center justify-center transition-all cursor-pointer z-30"
       >
-        <span class="material-symbols-outlined text-[20px]">close</span>
+        <span class="material-symbols-outlined text-[18px] sm:text-[20px]">close</span>
       </button>
 
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-start">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-8 items-start">
         
         <!-- Left: Image Preview & Quick Stack -->
         <div class="lg:col-span-6 flex flex-col gap-4">
-          <div class="w-full rounded-2xl bg-surface-container-lowest overflow-hidden border border-outline-variant/30 shadow-lg relative group">
+          <div class="w-full rounded-xl sm:rounded-2xl bg-surface-container-lowest overflow-hidden border border-outline-variant/30 shadow-lg relative group max-h-52 sm:max-h-none">
             <img 
               alt="Capa da Landing Page No Man's Sky" 
-              class="w-full h-auto object-cover" 
+              class="w-full h-full sm:h-auto object-cover object-top" 
               src="assets/images/projects/nms-cover.png"
             />
             <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/80 via-transparent to-transparent pointer-events-none"></div>

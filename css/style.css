@@ -104,18 +104,22 @@ dialog.project-modal {
   border: none;
   padding: 0;
   max-width: 880px;
-  width: 92%;
+  width: 94%;
   color: inherit;
   outline: none;
+  overflow: hidden;
 }
 
 dialog.project-modal[open] {
   display: flex !important;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   position: fixed !important;
   inset: 0 !important;
   margin: auto !important;
+  max-height: 94vh;
+  max-height: 94dvh;
   z-index: 99999 !important;
   animation: modalScaleIn 240ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
@@ -130,6 +134,17 @@ dialog.project-modal::backdrop {
 
 dialog:modal {
   overscroll-behavior: contain;
+}
+
+/* Tratamento responsivo para Viewports Mobile (evita corte superior com barras do navegador) */
+@media (max-width: 640px) {
+  dialog.project-modal[open] {
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    padding: 0.75rem 0;
+    max-height: 96dvh;
+    height: auto;
+  }
 }
 
 /* Animação suave para o Modal */
