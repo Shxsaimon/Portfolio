@@ -441,24 +441,36 @@
         <!-- CARD 1: Landing Page No Man's Sky (Real Project) -->
         <div class="project-card min-w-[300px] sm:min-w-[340px] md:min-w-[360px] flex-1 snap-start glass-panel rounded-2xl hover:border-primary/60 transition-all duration-300 p-6 flex flex-col justify-between group hover:shadow-[0_12px_32px_-8px_rgba(111,0,255,0.25)]">
           <div>
-            <!-- Visual Header with Real Image -->
-            <div class="w-full h-44 rounded-xl bg-surface-container-lowest overflow-hidden relative mb-4 flex items-center justify-center border border-outline-variant/20">
+            <!-- Visual Header with Real Image (Click to Expand Modal) -->
+            <div 
+              class="w-full h-44 rounded-xl bg-surface-container-lowest overflow-hidden relative mb-4 flex items-center justify-center border border-outline-variant/20 cursor-pointer group/media" 
+              id="open-nms-modal" 
+              role="button" 
+              tabindex="0" 
+              aria-haspopup="dialog" 
+              aria-label="Ver detalhes e expandir projeto No Man's Sky"
+            >
               <img 
                 alt="No Man's Sky Landing Page Cover" 
                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" 
                 src="assets/images/projects/nms-cover.png"
               />
-              <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent z-10"></div>
-              <span class="absolute top-3 right-3 z-20 font-mono text-[10px] text-tertiary bg-tertiary-container/40 border border-tertiary/30 px-2 py-0.5 rounded-full backdrop-blur-md">
+              <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent z-10 pointer-events-none"></div>
+              <span class="absolute top-3 right-3 z-20 font-mono text-[10px] text-tertiary bg-tertiary-container/40 border border-tertiary/30 px-2 py-0.5 rounded-full backdrop-blur-md pointer-events-none">
                 Front-end Imersivo
               </span>
+              <!-- Interactive Hint Overlay on Hover -->
+              <div class="absolute inset-0 bg-surface-dim/40 opacity-0 group-hover/media:opacity-100 transition-opacity flex items-center justify-center gap-1.5 z-20 backdrop-blur-[2px]">
+                <span class="material-symbols-outlined text-primary text-[20px]">open_in_full</span>
+                <span class="font-mono text-xs text-on-surface font-semibold">Expandir Detalhes</span>
+              </div>
             </div>
 
             <h3 class="text-lg font-bold text-on-surface mb-2 group-hover:text-primary transition-colors">
               No Man's Sky Landing Page
             </h3>
             <p class="text-xs sm:text-sm text-on-surface-variant mb-4 line-clamp-3 leading-relaxed">
-              Primeiro projeto web construído com HTML5 semântico, estilização com CSS3 puro, vídeo em background, modais interativos e design responsivo inspirado no universo No Man's Sky.
+              Primeiro projeto web construído com HTML5, estilização com CSS3 puro, vídeo em background e modal interativo com vídeo integrado inspirado no universo No Man's Sky.
             </p>
           </div>
 
@@ -466,8 +478,7 @@
             <div class="flex flex-wrap gap-1.5 mb-4">
               <span class="px-2 py-0.5 rounded bg-surface-container font-mono text-xs text-on-surface">HTML5</span>
               <span class="px-2 py-0.5 rounded bg-surface-container font-mono text-xs text-primary">CSS3 Puro</span>
-              <span class="px-2 py-0.5 rounded bg-surface-container font-mono text-xs text-on-surface">JS Vanilla</span>
-              <span class="px-2 py-0.5 rounded bg-surface-container font-mono text-xs text-on-surface">Responsivo</span>
+              <span class="px-2 py-0.5 rounded bg-surface-container font-mono text-xs text-secondary">JS Vanilla</span>
             </div>
             <div class="flex items-center gap-3">
               <a 
@@ -476,7 +487,7 @@
                 rel="noopener noreferrer" 
                 target="_blank"
               >
-                <span>Testar Demo</span>
+                <span>Conhecer Página</span>
                 <span class="material-symbols-outlined text-[14px]">arrow_outward</span>
               </a>
               <span class="text-outline-variant text-xs">•</span>
@@ -492,16 +503,16 @@
           </div>
         </div>
 
-        <!-- CARD 2: Próximo Projeto  (Placeholder Elegante) -->
+        <!-- CARD 2: Próximo Projeto (Placeholder Elegante) -->
         <div class="project-card min-w-[300px] sm:min-w-[340px] md:min-w-[360px] flex-1 snap-start glass-panel rounded-2xl border-dashed border-outline-variant/40 hover:border-secondary/60 transition-all duration-300 p-6 flex flex-col justify-between group">
           <div>
             <!-- Visual Teaser -->
             <div class="w-full h-44 rounded-xl bg-surface-container-lowest/80 overflow-hidden relative mb-4 flex flex-col items-center justify-center border border-outline-variant/20 p-4 text-center">
               <div class="w-12 h-12 rounded-full bg-secondary-container/20 flex items-center justify-center text-secondary mb-2">
-                <span class="material-symbols-outlined text-[24px]">rocket_launch</span>
+                <span class="material-symbols-outlined text-[24px]">hourglass_top</span>
               </div>
               <span class="font-mono text-xs text-secondary font-semibold">Novo Projeto</span>
-              <span class="text-[11px] text-outline mt-1">Em fase de arquitetura</span>
+              <span class="text-[11px] text-outline mt-1">Fases finais de desenvolvimento</span>
               <span class="absolute top-3 right-3 font-mono text-[10px] text-secondary bg-secondary-container/30 border border-secondary/20 px-2 py-0.5 rounded-full">
                 Em Breve
               </span>
@@ -511,15 +522,15 @@
               Próximo Projeto
             </h3>
             <p class="text-xs sm:text-sm text-on-surface-variant mb-4 line-clamp-3 leading-relaxed">
-              Aplicação web em desenvolvimento focada em persistência robusta, design system consistente e automação de fluxos operacionais.
+              Projeto em fases finais de desenvolvimento e lapidação de interface. Em breve disponível para navegação e consulta de código.
             </p>
           </div>
 
           <div>
             <div class="flex flex-wrap gap-1.5 mb-4">
-              <span class="px-2 py-0.5 rounded bg-surface-container font-mono text-xs text-on-surface-variant">Software</span>
-              <span class="px-2 py-0.5 rounded bg-surface-container font-mono text-xs text-on-surface-variant">REST API</span>
-              <span class="px-2 py-0.5 rounded bg-surface-container font-mono text-xs text-on-surface-variant">SQL</span>
+              <span class="px-2 py-0.5 rounded bg-surface-container font-mono text-xs text-on-surface-variant">Web</span>
+              <span class="px-2 py-0.5 rounded bg-surface-container font-mono text-xs text-on-surface-variant">HTML</span>
+              <span class="px-2 py-0.5 rounded bg-surface-container font-mono text-xs text-on-surface-variant">CSS</span>
             </div>
             <span class="font-mono text-xs text-outline flex items-center gap-1">
               <span class="material-symbols-outlined text-[14px]">hourglass_empty</span>
@@ -528,37 +539,37 @@
           </div>
         </div>
 
-        <!-- CARD 3: Nova API / Serviço de Dados (Placeholder Elegante) -->
+        <!-- CARD 3: Em Planejamento (Placeholder Elegante) -->
         <div class="project-card min-w-[300px] sm:min-w-[340px] md:min-w-[360px] flex-1 snap-start glass-panel rounded-2xl border-dashed border-outline-variant/40 hover:border-tertiary/60 transition-all duration-300 p-6 flex flex-col justify-between group">
           <div>
             <!-- Visual Teaser -->
             <div class="w-full h-44 rounded-xl bg-surface-container-lowest/80 overflow-hidden relative mb-4 flex flex-col items-center justify-center border border-outline-variant/20 p-4 text-center">
               <div class="w-12 h-12 rounded-full bg-primary-container/20 flex items-center justify-center text-primary mb-2">
-                <span class="material-symbols-outlined text-[24px]">terminal</span>
+                <span class="material-symbols-outlined text-[24px]">architecture</span>
               </div>
-              <span class="font-mono text-xs text-primary font-semibold">API &amp; Microsserviço</span>
-              <span class="text-[11px] text-outline mt-1">Planejamento técnico</span>
+              <span class="font-mono text-xs text-primary font-semibold">Novo Projeto</span>
+              <span class="text-[11px] text-outline mt-1">Em fase de planejamento</span>
               <span class="absolute top-3 right-3 font-mono text-[10px] text-primary bg-primary-container/30 border border-primary/20 px-2 py-0.5 rounded-full">
-                Em Breve
+                Em Planejamento
               </span>
             </div>
 
             <h3 class="text-lg font-bold text-on-surface mb-2 group-hover:text-primary transition-colors">
-              Serviço Desacoplado &amp; Dados
+              Em Planejamento
             </h3>
             <p class="text-xs sm:text-sm text-on-surface-variant mb-4 line-clamp-3 leading-relaxed">
-              Módulo de integração backend com modelagem de dados estrita, autenticação e documentação de endpoints.
+              Projeto em fase de concepção e planejamento de arquitetura. Mais detalhes sobre o projeto serão apresentados em breve.
             </p>
           </div>
 
           <div>
             <div class="flex flex-wrap gap-1.5 mb-4">
+              <span class="px-2 py-0.5 rounded bg-surface-container font-mono text-xs text-on-surface-variant">Software</span>
+              <span class="px-2 py-0.5 rounded bg-surface-container font-mono text-xs text-on-surface-variant">Lógica</span>
               <span class="px-2 py-0.5 rounded bg-surface-container font-mono text-xs text-on-surface-variant">Backend</span>
-              <span class="px-2 py-0.5 rounded bg-surface-container font-mono text-xs text-on-surface-variant">Clean Code</span>
-              <span class="px-2 py-0.5 rounded bg-surface-container font-mono text-xs text-on-surface-variant">Cloud</span>
             </div>
             <span class="font-mono text-xs text-outline flex items-center gap-1">
-              <span class="material-symbols-outlined text-[14px]">hourglass_empty</span>
+              <span class="material-symbols-outlined text-[14px]">schedule</span>
               <span>Em planejamento</span>
             </span>
           </div>
@@ -789,6 +800,127 @@
       </div>
     </div>
   </footer>
+
+  <!-- MODAL DE DETALHES DO PROJETO (Native HTML5 Dialog — Obsidian Kinetic) -->
+  <dialog class="project-modal" id="project-modal" aria-labelledby="modal-project-title">
+    <div class="glass-panel-elevated rounded-3xl border border-primary/30 p-6 sm:p-8 relative shadow-[0_25px_60px_rgba(0,0,0,0.85)] max-h-[90vh] overflow-y-auto">
+      
+      <!-- Close Button -->
+      <button 
+        id="close-modal-btn" 
+        type="button" 
+        aria-label="Fechar detalhes do projeto" 
+        class="absolute top-5 right-5 w-9 h-9 rounded-full bg-surface-container border border-outline-variant/30 hover:border-primary text-on-surface-variant hover:text-on-surface flex items-center justify-center transition-all cursor-pointer z-30"
+      >
+        <span class="material-symbols-outlined text-[20px]">close</span>
+      </button>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-start">
+        
+        <!-- Left: Image Preview & Quick Stack -->
+        <div class="lg:col-span-6 flex flex-col gap-4">
+          <div class="w-full rounded-2xl bg-surface-container-lowest overflow-hidden border border-outline-variant/30 shadow-lg relative group">
+            <img 
+              alt="Capa da Landing Page No Man's Sky" 
+              class="w-full h-auto object-cover" 
+              src="assets/images/projects/nms-cover.png"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/80 via-transparent to-transparent pointer-events-none"></div>
+            <span class="absolute bottom-3 left-3 font-mono text-xs text-tertiary bg-surface-container-lowest/90 border border-tertiary/40 px-2.5 py-1 rounded-full backdrop-blur-md">
+              Front-end Imersivo
+            </span>
+          </div>
+
+          <!-- Stack Tags -->
+          <div>
+            <span class="font-mono text-[11px] text-outline uppercase tracking-wider block mb-2">Tecnologias Utilizadas</span>
+            <div class="flex flex-wrap gap-1.5">
+              <span class="px-2.5 py-1 rounded bg-surface-container border border-outline-variant/30 font-mono text-xs text-on-surface font-semibold">HTML5</span>
+              <span class="px-2.5 py-1 rounded bg-surface-container border border-outline-variant/30 font-mono text-xs text-primary font-semibold">CSS3 Puro</span>
+              <span class="px-2.5 py-1 rounded bg-surface-container border border-outline-variant/30 font-mono text-xs text-secondary font-semibold">JS Vanilla</span>
+              <span class="px-2.5 py-1 rounded bg-surface-container border border-outline-variant/30 font-mono text-xs text-on-surface">Manipulação de DOM</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Case Details & Engineering Highlights -->
+        <div class="lg:col-span-6 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-2 mb-1.5">
+              <span class="font-mono text-xs text-secondary font-bold">01 //</span>
+              <span class="font-mono text-xs text-secondary tracking-widest uppercase font-semibold">Projeto Web Temático</span>
+            </div>
+
+            <h2 id="modal-project-title" class="text-2xl sm:text-3xl font-bold text-on-surface leading-tight mb-3">
+              No Man's Sky — Landing Page
+            </h2>
+
+            <p class="text-sm text-on-surface-variant mb-6 leading-relaxed">
+              Primeiro projeto web desenvolvido para consolidar os fundamentos da web, combinando estilização temática em CSS puro com vídeo em background e conteúdo integrado do universo <em>No Man's Sky</em>.
+            </p>
+
+            <!-- Highlights -->
+            <div class="space-y-4 mb-6">
+              <div class="flex items-start gap-3">
+                <div class="w-8 h-8 rounded-lg bg-primary-container/20 flex items-center justify-center text-primary mt-0.5 shrink-0">
+                  <span class="material-symbols-outlined text-[18px]">movie</span>
+                </div>
+                <div>
+                  <h3 class="text-sm font-semibold text-on-surface">Vídeo em Background &amp; Ambientação Sci-Fi</h3>
+                  <p class="text-xs text-on-surface-variant">Vídeo contínuo em background (`autoplay loop muted`) com sobreposição de camada gradiente em CSS para criar uma atmosfera visual imersiva e cinematográfica.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <div class="w-8 h-8 rounded-lg bg-secondary-container/20 flex items-center justify-center text-secondary mt-0.5 shrink-0">
+                  <span class="material-symbols-outlined text-[18px]">smart_display</span>
+                </div>
+                <div>
+                  <h3 class="text-sm font-semibold text-on-surface">Modal com Vídeo Integrado do YouTube</h3>
+                  <p class="text-xs text-on-surface-variant">Modal interativo desenvolvido em JavaScript puro para exibir análise em vídeo sobre a evolução e redenção do jogo, com controle do iframe para encerrar a mídia ao fechar.</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-tertiary mt-0.5 shrink-0">
+                  <span class="material-symbols-outlined text-[18px]">palette</span>
+                </div>
+                <div>
+                  <h3 class="text-sm font-semibold text-on-surface">Estilização em CSS3 Puro &amp; Identidade Visual</h3>
+                  <p class="text-xs text-on-surface-variant">Paleta temática inspirada no jogo (tons rubro-escuros), gradientes customizados, tipografia Google Fonts e micro-interações de hover nos botões e navegação.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTAs -->
+          <div class="flex flex-wrap items-center gap-3 pt-3 border-t border-outline-variant/20">
+            <a 
+              class="px-5 py-2.5 rounded-full bg-primary text-on-primary hover:bg-primary-hover hover:shadow-[0_0_20px_rgba(111,0,255,0.4)] text-xs font-semibold transition-all flex items-center gap-1.5" 
+              href="https://shxsaimon.github.io/Landing-page-nomanssky/" 
+              rel="noopener noreferrer" 
+              target="_blank"
+            >
+              <span>Conhecer Página</span>
+              <span class="material-symbols-outlined text-[16px]">arrow_outward</span>
+            </a>
+            <a 
+              class="px-4 py-2.5 rounded-full glass-panel hover:bg-surface-container-high hover:border-secondary text-on-surface text-xs font-medium transition-all flex items-center gap-1.5" 
+              href="https://github.com/Shxsaimon/Landing-page-nomanssky" 
+              rel="noopener noreferrer" 
+              target="_blank"
+            >
+              <span>Ver no GitHub</span>
+              <span class="material-symbols-outlined text-[16px]">code</span>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </dialog>
 
   <!-- Main JavaScript File -->
   <script src="js/main.js"></script>

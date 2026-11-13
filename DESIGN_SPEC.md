@@ -54,10 +54,10 @@ A navegação segue uma narrativa fluida de cima para baixo em 5 seções estrat
     - Botões: `[ Ver Galeria Completa ]` e `[ Testar Protótipo ]`.
 
 ### Seção 3: Outros Projetos Reais (Carrossel Horizontal / Slider)
-- **Conceito:** Exibição estilo *Netflix / Amazon*, mostrando 3 cartões por vez com setas de navegação lateral (prev/next) e suporte a drag/swipe.
+- **Conceito:** Exibição estilo *Netflix / Amazon*, mostrando 3 cartões por vez com setas de navegação lateral (prev/next com loop infinito), suporte a drag-to-scroll com mouse no desktop e swipe no mobile.
 - **Nota de Escopo:** Repositórios de anotações/exercícios de estudos ficam de fora; apenas projetos com propósito e entrega real entram aqui.
-- **Card Inicial 1:** **Landing Page No Man's Sky** (Front-end imersivo, vídeo hero background, animações CSS e responsividade fluida).
-- **Cards Futuros / Próximos Projetos:** Espaços modulares reservados para novos produtos full-stack ou freelas.
+- **Card Inicial 1:** **Landing Page No Man's Sky** (Primeiro projeto web com vídeo de background em loop, estilização temática em CSS3 puro e modal integrado ao YouTube em JS Vanilla. Ao clicar na mídia do card, abre modal expandido com case detalhado e CTAs).
+- **Cards Futuros / Próximos Projetos:** Espaços modulares reservados para novos produtos full-stack ou freelas ("Em Breve" e "Em Planejamento").
 
 ### Seção 4: Habilidades Técnicas & Metodologia
 Organização em 4 grupos claros para evidenciar o domínio de ponta a ponta:
