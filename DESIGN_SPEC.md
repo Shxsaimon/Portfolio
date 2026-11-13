@@ -59,12 +59,12 @@ A navegação segue uma narrativa fluida de cima para baixo em 5 seções estrat
 - **Card Inicial 1:** **Landing Page No Man's Sky** (Primeiro projeto web com vídeo de background em loop, estilização temática em CSS3 puro e modal integrado ao YouTube em JS Vanilla. Ao clicar na mídia do card, abre modal expandido com case detalhado e CTAs).
 - **Cards Futuros / Próximos Projetos:** Espaços modulares reservados para novos produtos full-stack ou freelas ("Em Breve" e "Em Planejamento").
 
-### Seção 4: Habilidades Técnicas & Metodologia
-Organização em 4 grupos claros para evidenciar o domínio de ponta a ponta:
-1. **Front-end & UX/UI:** HTML5 Semântico, CSS3 Moderno, Design Tokens, JS Vanilla (ES6+), Bootstrap, Acessibilidade (WCAG), Micro-animações.
-2. **Back-end & Arquitetura:** PHP 8+, Arquitetura MVC, Roteamento HTTP desacoplado, APIs RESTful, Prepared Statements e Defesa em Profundidade.
-3. **Bancos de Dados & Dados:** PostgreSQL (Neon Serverless), MySQL, Transações Atômicas (ACID), Modelagem Relacional, Migrations Versionadas.
-4. **DevOps & Cloud:** Vercel (Serverless Deployments), Vercel Blob Storage, Git / GitHub Actions (CI/CD de migrações), GitFlow.
+### Seção 4: Habilidades Técnicas
+Organização em 4 frentes claras com visão direta por áreas:
+1. **Front-end & UX Craft:** HTML5, CSS3 Tokens, Design Tokens, JS Vanilla (ES6+), Bootstrap, Acessibilidade (WCAG), Micro-interações.
+2. **Back-end & Arquitetura:** PHP 8+, Arquitetura MVC própria, Front Controller, roteamento HTTP, PDO e fundamentos de REST APIs.
+3. **Bancos de Dados & ACID:** PostgreSQL (Neon Serverless), MySQL, Transações Atômicas (ACID), Modelagem Relacional, Migrations Versionadas.
+4. **DevOps & Cloud:** Vercel (Serverless Deployments), Vercel Blob Storage, Git / GitHub, GitHub Actions (CI/CD de migrações).
 
 ### Seção 5: Rodapé & Contato
 - Chamada amigável para networking ou contratação.
