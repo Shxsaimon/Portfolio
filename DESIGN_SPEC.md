@@ -67,9 +67,9 @@ Organização em 4 frentes claras com visão direta por áreas:
 4. **DevOps & Cloud:** Vercel (Serverless Deployments), Vercel Blob Storage, Git / GitHub, GitHub Actions (CI/CD de migrações).
 
 ### Seção 5: Rodapé & Contato
-- Chamada amigável para networking ou contratação.
-- Cartão de contato interativo com botão de **copiar e-mail em 1 clique** com feedback visual (`"Copiado!"`).
-- Links para redes e créditos.
+- Chamada amigável para networking, oportunidades de desenvolvimento e colaboração.
+- Cartão de contato interativo com botão de **copiar e-mail em 1 clique** com feedback visual (`"Copiado!"`), botão de envio direto e links para redes (GitHub, LinkedIn e WhatsApp).
+- Rodapé com créditos técnicos e badge de identificação profissional.
 
 ---
 
