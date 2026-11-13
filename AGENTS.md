@@ -9,8 +9,8 @@ Este documento estabelece as regras de conduta técnica, governança de código,
 * **Proprietário:** Saimon Furigo (`@Shxsaimon`).
 * **Objetivo:** Portfólio pessoal e vitrine de engenharia de software focado em demonstrar competências de **Desenvolvedor de Software & UX/UI**, unindo sensibilidade estética em interfaces a sistemas resilientes de ponta a ponta.
 * **Projetos Principais:**
-  * **Symo Finance (Destaque Principal):** Plataforma de gestão financeira pessoal e empresarial em PHP 8 com arquitetura MVC própria, transações atômicas (ACID), PostgreSQL no Neon (PgBouncer/SSL) e Vercel Serverless.
-  * **Landing Page No Man's Sky (Carrossel):** Primeiro projeto web temático (HTML5, CSS3, JS Vanilla, design imersivo responsivo).
+  * **Symo Finance (Destaque Principal):** Plataforma de gestão financeira pessoal em PHP 8 com arquitetura MVC própria, transações atômicas (ACID), PostgreSQL no Neon (PgBouncer/SSL) e Vercel Serverless.
+  * **Landing Page No Man's Sky (Carrossel):** Primeiro projeto web temático (HTML5, CSS3 puro, JS Vanilla com vídeo contínuo em background e modal integrado ao YouTube).
 * **Guia Visual Vinculante:** [`DESIGN.md`](DESIGN.md) (Tema *Obsidian Kinetic*).
 * **Especificação Funcional Vinculante:** [`DESIGN_SPEC.md`](DESIGN_SPEC.md).
 
@@ -36,7 +36,7 @@ Este documento estabelece as regras de conduta técnica, governança de código,
 
 ## 3. Gestão de Dependências e Bibliotecas
 
-* **Padrão:** O projeto prioriza leveza máxima, carregamento instantâneo e ausência de *framework lock-in* (HTML5 semântico, CSS com tokens nativos e JavaScript Vanilla).
+* **Padrão:** O projeto prioriza leveza máxima, carregamento instantâneo e ausência de *framework lock-in* (HTML5, CSS com tokens nativos e JavaScript Vanilla).
 * **Novas Ferramentas:** O agente é livre para sugerir bibliotecas (ícones, animações, utilitários ou bundlers) que simplifiquem o desenvolvimento, mas **NUNCA deve instalar pacotes npm ou injetar CDNs externas sem antes consultar e obter a aprovação explícita do usuário**.
 
 ---
@@ -84,7 +84,7 @@ Este documento estabelece as regras de conduta técnica, governança de código,
 ### 8.1. Checklist de Validação Local (Antes de Concluir)
 Antes de declarar qualquer tarefa finalizada, o agente deve verificar:
 1. Se todos os caminhos relativos de imagens e scripts existem no disco e estão íntegros.
-2. Se as interatividades principais permanecem operacionais (Device Switcher, Carrossel horizontal e Cópia de e-mail).
+2. Se as interatividades principais permanecem operacionais (Device Switcher com Lupa, Carrossel circular com drag-to-scroll, Modal de detalhes e Cópia de e-mail).
 3. Se a responsividade para dispositivos móveis está preservada (sem vazamento horizontal de tela).
 
 ### 8.2. Formato Obrigatório da Resposta no Chat

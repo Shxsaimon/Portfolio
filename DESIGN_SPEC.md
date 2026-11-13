@@ -1,18 +1,20 @@
 # ESPECIFICAÇÃO DE DESIGN & PRODUTO (DESIGN_SPEC)
 **Portfólio Pessoal — Saimon Furigo**
-*Versão 1.0 — 09/11/2026*
+  *Versão Consolidada — 2026*
 
 ---
 
 ## 1. Visão Geral & Posicionamento
 
 * **Nome do Profissional:** Saimon Furigo
-* **Perfil:** Desenvolvedor de Software com forte paixão e aptidão por Front-end, Design Systems e refinamento de UX/UI, combinado a uma visão holística de arquitetura de software de ponta a ponta (regras de negócio, segurança, bancos relacionais, concorrência atômica, serverless, CI/CD e infraestrutura).
-* **Links Oficiais:**
+* **Perfil:** Desenvolvedor de Software focado em interfaces elegantes e arquitetura de sistemas confiável, unindo refinamento em UX/UI e Design Systems ao domínio prático de desenvolvimento backend, modelagem relacional e automação em nuvem.
+* **Canais Oficiais:**
   * GitHub: [github.com/Shxsaimon](https://github.com/Shxsaimon)
   * LinkedIn: [linkedin.com/in/saimonfurigo](https://www.linkedin.com/in/saimonfurigo/)
-* **Objetivo do Portfólio:** Apresentar de forma sofisticada e clara a capacidade de transformar problemas reais em produtos digitais de alta precisão técnica e visual.
-* **Ferramenta de Prototipação/Layout:** Google Stitch.
+  * WhatsApp: [+55 (47) 99639-1369](https://wa.me/5547996391369)
+  * E-mail: [shxsaimondev@gmail.com](mailto:shxsaimondev@gmail.com)
+* **Objetivo do Portfólio:** Vitrine profissional clara e direta, demonstrando competência técnica com projetos reais e código limpo, sem dependências de frameworks pesados no front-end.
+* **Origem Visual:** Prototipação conceitual via Google Stitch, refinada e consolidada no tema **Obsidian Kinetic**.
 
 ---
 
@@ -22,109 +24,114 @@ A navegação segue uma narrativa fluida de cima para baixo em 5 seções estrat
 
 ```text
 ┌────────────────────────────────────────────────────────────────────────┐
-│ [1] HEADER & HERO: Apresentação Forte + Bio UX/FullStack + Ações       │
+│ [1] HEADER & HERO: Apresentação + Bio + Links Diretos                 │
 ├────────────────────────────────────────────────────────────────────────┤
-│ [2] PROJETO EM DESTAQUE: Symo Finance (Showcase + Device Switcher)     │
+│ [2] PROJETO EM DESTAQUE: Symo Finance (Showcase + Switcher + Lupa)     │
 ├────────────────────────────────────────────────────────────────────────┤
-│ [3] OUTROS PROJETOS: Carrossel Horizontal Estilo Streaming / Slider    │
+│ [3] OUTROS PROJETOS: Carrossel Circular com Drag + Modal de Detalhes   │
 ├────────────────────────────────────────────────────────────────────────┤
-│ [4] HABILIDADES TÉCNICAS: Skills por Camadas (Front/UX, Back, Banco, DevOps) │
+│ [4] HABILIDADES TÉCNICAS: Visão por Áreas (Front, Back, Dados, DevOps e Nuvem) │
 ├────────────────────────────────────────────────────────────────────────┤
-│ [5] FOOTER: Status de Disponibilidade + Cópia de E-mail em 1 Clique    │
+│ [5] CONTATO & RODAPÉ: Cópia de E-mail em 1 Clique + Redes + Badge Dev  │
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Seção 1: Header & Hero ("Sobre Mim")
-- **Navbar Fixa Translúcida:** Logotipo textual (`SF` ou `Saimon.dev`), links de âncora (*Projetos*, *Habilidades*, *Contato*) e botão de ação rápida (*Disponível para novos projetos*).
+- **Navbar Fixa com Efeito de Vidro (Glassmorphism):**
+  - Identificação de perfil: `SOFTWARE DEVELOPER & UX/UI`.
+  - Links de âncora para as seções: `Sobre Mim` (`#sobre-mim`), `Projeto em Destaque` (`#projeto-destaque`), `Outros Projetos` (`#outros-projetos`), `Habilidades` (`#habilidades`) e `Contato` (`#contato`).
+  - Indicador de status: `● Disponível` com pulso luminoso em verde esmeralda.
+  - Botão de ação rápida: `Falar Comigo` direcionando para `#contato`.
 - **Hero Section:**
-  - Tag pill: `● Aberto a novos desafios & oportunidades`
-  - Headline de impacto: *Desenvolvedor de Software focado em interfaces elegantes e arquitetura robusta de ponta a ponta.*
-  - Subtítulo: Focado na ponte entre UX/UI refinado e engenharia sólida (PHP 8 com arquitetura MVC, PostgreSQL, JavaScript moderno e pipelines em nuvem).
-  - CTAs Primários: Botão com gradiente `[Explorar Projetos]` e botões secundários `[GitHub]` e `[LinkedIn]`.
+  - Avatar circular com ring brilhante e badge flutuante de disponibilidade.
+  - Headline direta: *Sistemas completos com atenção a cada detalhe de interface e arquitetura.*
+  - Subtítulo focado em valor prático: atuação na intersecção entre código organizado e interfaces fluidas.
+  - CTAs Primários: Botão `[Ver Projetos]` e links secundários para GitHub e LinkedIn.
+  - Linha de tecnologias de destaque: `PHP 8+`, `PostgreSQL`, `JavaScript`, `CSS Tokens` e `HTML5`.
 
-### Seção 2: Projeto Carro-Chefe (Symo Finance)
-- Apresentação em bloco de destaque visual único (Showcase):
-  - **Coluna Visual (60%):** Mockup do sistema com a **Interatividade Fase 1 (Device Switcher)**:
-    - Alternador: `[ 💻 Desktop ]` | `[ 📱 Mobile ]`.
-    - Transição fluida entre a visualização do Dashboard em tela cheia e o menu/modal mobile.
-    - Badges flutuantes: *45 Telas Documentadas*, *Concorrência Atômica*, *Zero Framework Lock-in*.
-  - **Coluna Técnica (40%):**
-    - Título e proposta de valor da plataforma de gestão financeira.
-    - Destaques de engenharia: Arquitetura MVC própria sem bibliotecas externas, integração com Neon PgBouncer via SSL, auditoria com JSON Diff.
-    - Botões: `[ Ver Galeria Completa ]` e `[ Testar Protótipo ]`.
+### Seção 2: Projeto em Destaque (Symo Finance)
+- Apresentação em bloco de destaque visual único (Showcase com âncora `#projeto-destaque`):
+  - **Coluna Visual:**
+    - Alternador de dispositivos: `[ 💻 Desktop ]` | `[ 📱 Mobile ]`.
+    - **Modo Desktop:** Mockup com controles de janela estilo Windows (`─`, `□`, `✕`), barra de URL e **Lupa Interativa** com zoom dinâmico (até 1.9x) acompanhando o cursor do mouse.
+    - **Modo Mobile:** Frame de smartphone com transição suave de visualização.
+    - Badges técnicos contextuais: `Transações Atômicas (ACID)` e `Neon PostgreSQL + SSL`.
+  - **Coluna Técnica:**
+    - Título: *Symo Finance — Gestão Financeira Pessoal*.
+    - Proposta: plataforma web leve em PHP 8 com arquitetura MVC própria, sem frameworks pesados, garantindo consistência transacional e design fluído.
+    - Destaques de engenharia: Arquitetura MVC com Front Controller, Integridade Financeira com transações atômicas e Trilha de Auditoria com JSON Diff.
+    - Tags de stack: `PHP 8.2+`, `PostgreSQL (Neon)`, `Vercel Serverless`, `Bootstrap 5.3`, `Chart.js` e `GitHub Actions`.
+    - Botões de ação: `[ Ver no GitHub ]` e `[ Galeria de Capturas ]`.
 
 ### Seção 3: Outros Projetos Reais (Carrossel Horizontal / Slider)
-- **Conceito:** Exibição estilo *Netflix / Amazon*, mostrando 3 cartões por vez com setas de navegação lateral (prev/next com loop infinito), suporte a drag-to-scroll com mouse no desktop e swipe no mobile.
-- **Nota de Escopo:** Repositórios de anotações/exercícios de estudos ficam de fora; apenas projetos com propósito e entrega real entram aqui.
-- **Card Inicial 1:** **Landing Page No Man's Sky** (Primeiro projeto web com vídeo de background em loop, estilização temática em CSS3 puro e modal integrado ao YouTube em JS Vanilla. Ao clicar na mídia do card, abre modal expandido com case detalhado e CTAs).
-- **Cards Futuros / Próximos Projetos:** Espaços modulares reservados para novos produtos full-stack ou freelas ("Em Breve" e "Em Planejamento").
+- **Conceito:** Exibição horizontal estilo streaming com 3 cartões visíveis:
+  - **Navegação Circular:** Setas de navegação lateral com loop contínuo (ao chegar nas extremidades, retorna para o início ou final).
+  - **Drag-to-Scroll:** Arraste livre pelo mouse no desktop com cursor `grab`/`grabbing`, além de suporte nativo a swipe em telas touch.
+- **Card 1: Landing Page No Man's Sky (Projeto Real):**
+  - Primeiro projeto web temático, desenvolvido com HTML5, CSS3 puro, vídeo em background contínuo e modal interativo em JS Vanilla integrado ao YouTube.
+  - Ao clicar na imagem do card, dispara o **Modal Nativo de Detalhes (`<dialog>`)**, apresentando o case com imagem ampla, tecnologias e botões para a página publicada (`Conhecer Página`) e repositório.
+- **Card 2: Próximo Projeto (Placeholder):**
+  - Espaço reservado com status de *"Em Breve"* e indicação de *"Fases finais de desenvolvimento"*, com tags genéricas de base (`Web`, `HTML`, `CSS`).
+- **Card 3: Em Planejamento (Placeholder):**
+  - Espaço reservado com status de *"Em Planejamento"*, com tags genéricas (`Software`, `Lógica`, `Backend`).
 
 ### Seção 4: Habilidades Técnicas
-Organização em 4 frentes claras com visão direta por áreas:
-1. **Front-end & UX Craft:** HTML5, CSS3 Tokens, Design Tokens, JS Vanilla (ES6+), Bootstrap, Acessibilidade (WCAG), Micro-interações.
+Organização em 4 frentes modulares com visão direta por áreas (`VISÃO POR ÁREAS`):
+1. **Front-end & UX Craft:** Design Systems com CSS Tokens, HTML5, layouts responsivos, micro-interações e acessibilidade (WCAG).
 2. **Back-end & Arquitetura:** PHP 8+, Arquitetura MVC própria, Front Controller, roteamento HTTP, PDO e fundamentos de REST APIs.
-3. **Bancos de Dados & ACID:** PostgreSQL (Neon Serverless), MySQL, Transações Atômicas (ACID), Modelagem Relacional, Migrations Versionadas.
-4. **DevOps & Cloud:** Vercel (Serverless Deployments), Vercel Blob Storage, Git / GitHub, GitHub Actions (CI/CD de migrações).
+3. **Bancos de Dados & ACID:** PostgreSQL (Neon Serverless), MySQL, Transações Atômicas (ACID), Modelagem Relacional e controle de migrações.
+4. **DevOps, Nuvem & Tooling:** Vercel (Serverless Deployments), Vercel Blob Storage, Git & GitHub, e GitHub Actions (automação e seeds).
 
 ### Seção 5: Rodapé & Contato
-- Chamada amigável para networking, oportunidades de desenvolvimento e colaboração.
-- Cartão de contato interativo com botão de **copiar e-mail em 1 clique** com feedback visual (`"Copiado!"`), botão de envio direto e links para redes (GitHub, LinkedIn e WhatsApp).
-- Rodapé com créditos técnicos e badge de identificação profissional.
+- Card de contato com chamada amigável (*"Iniciar uma conversa"* e *"Vamos construir algo memorável juntos?"*).
+- Subtítulo honesto: *"Disponível para novos projetos de software, oportunidades de desenvolvimento e colaboração técnica."*
+- Ações de e-mail duplas:
+  - **Caixa de cópia em 1 clique** com feedback visual (`"Copiado!"`).
+  - **Botão de envio direto** via protocolo `mailto:`.
+- Canais diretos: GitHub, LinkedIn e WhatsApp (+55 47 99639-1369).
+- Rodapé com créditos técnicos e badge profissional com ícone de código: `Software Dev`.
 
 ---
 
-## 3. Roteiro de Interatividades Incrementais
+## 3. Interatividades Implementadas & Próximos Ciclos
 
-* **Fase 1 (Nativa / No Lançamento):**
-  * **Device Frame Switcher no Symo Finance:** Toggle `Desktop / Mobile` que troca a imagem/frame do mockup com transição suave.
-  * **Carrossel Horizontal:** Navegação fluida de projetos laterais com botões de avançar/voltar.
-* **Fase 2 (Próximo Ciclo):**
-  * **Seletor de Perspectiva no Hero:** Botão switch `[Visão Geral / Recrutador]` vs `[Visão Técnica / Engenharia]`.
-* **Fase 3 (Refinamento Futuro):**
-  * **Seletor de Acentos de Cor:** Pílulas no canto inferior da tela para trocar entre as vibes de cor.
-
----
-
-## 4. Design Tokens & Paletas para Teste
-
-### Superfícies e Bases Comuns (Dark Moderno)
-* **Background Canvas:** `#0A090D` (Obsidian profundo com leve nuance roxa)
-* **Surface Container / Cards:** `#14121A` (Berinjela escuro refinado)
-* **Surface Container High:** `#1C1824`
-* **Card Border:** `1px solid rgba(255, 255, 255, 0.08)` / `#282236`
-* **Texto Primário:** `#F4F0EA` (Ice Warm — alta legibilidade sem agredir a visão)
-* **Texto Secundário / Muted:** `#9C93AB` (Lavanda acinzentado)
+* **Interatividades Ativas e Validadas:**
+  * **Device Switcher (Symo Finance):** Toggle entre Desktop e Mobile com transição fluida.
+  * **Lupa Interativa (Mockup Desktop):** Zoom óptico dinâmico (1.9x) guiado pelas coordenadas do mouse.
+  * **Carrossel Circular com Arraste:** Rolagem contínua com setas infinitas e suporte completo a drag-to-scroll.
+  * **Modal Nativo de Detalhes de Projeto (`<dialog>`):** Top-layer nativo com isolamento de acessibilidade e light-dismiss.
+  * **Cópia de E-mail em 1 Clique:** Copia o endereço `shxsaimondev@gmail.com` com feedback temporário.
+* **Evoluções Futuras (Backlog Opcional):**
+  * Seletor de perspectiva no Hero (Visão Geral vs Visão Técnica).
+  * Seletor de acentos de cor ou temas secundários.
 
 ---
 
-### Comparativo das Paletas de Ação (Para Testar no Stitch)
+## 4. Design Tokens Consolidados (Obsidian Kinetic)
 
-```text
-┌───────────────────────────────────────┬───────────────────────────────────────┐
-│ VARIANTE 1: DEEP VIOLET ELEGANCE      │ VARIANTE 2: ORCHID ENERGY             │
-│ (Foco: Sofisticado, Escuro e Sóbrio)  │ (Foco: Alto Contraste e Elétrico)     │
-├───────────────────────────────────────┼───────────────────────────────────────┤
-│ • Primária: #6F00FF (Electric Violet) │ • Primária: #6F00FF (Electric Violet) │
-│ • Hover de Botões: #340094 / #48005E  │ • Hover de Botões: #8900B3            │
-│   (Escurece com profundidade e peso)  │   (Ilumina com energia e vibração)    │
-│ • Gradiente de Destaque:              │ • Gradiente de Destaque:              │
-│   linear-gradient(135deg,             │   linear-gradient(135deg,             │
-│     #6F00FF 0%,                       │     #6F00FF 0%,                       │
-│     #340094 100%)                     │     #B829E3 100%)                     │
-│ • Bordas Ativas: #48005E              │ • Bordas Ativas: #8900B3              │
-└───────────────────────────────────────┴───────────────────────────────────────┘
-```
+O tema unificado do portfólio baseia-se em contrastes profundos, superfícies escuras com leve nuance berinjela e acentos elétricos em violeta:
+
+* **Superfícies & Fundo:**
+  * Canvas de Fundo: `#0A090D` (Obsidian profundo)
+  * Container / Cards (Glassmorphism): `rgba(20, 18, 26, 0.72)` com `backdrop-filter: blur(16px)`
+  * Container Elevado: `rgba(28, 24, 38, 0.85)` com `backdrop-filter: blur(20px)`
+  * Bordas Padrão: `rgba(255, 255, 255, 0.08)`
+* **Tipografia & Textos:**
+  * Texto Primário: `#F4F0EA` (Ice Warm — alta legibilidade sem estresse visual)
+  * Texto Secundário: `#9C93AB` (Lavanda acinzentado)
+* **Acentos & Iluminação:**
+  * Primária: `#6F00FF` (Electric Violet)
+  * Secundária: `#EFB0FF` (Light Orchid)
+  * Terciária / Destaques: `#D0BCFF` (Lavanda suave)
 
 ---
 
 ## 5. Tipografia & Formas
 
-* **Família Tipográfica Principal:** `Inter` ou `Plus Jakarta Sans` (Google Fonts).
-* **Headlines Display:** Peso 700 / 800, `letter-spacing: -0.02em`.
-* **Subtítulos e Seções:** Peso 600, `letter-spacing: -0.01em`.
-* **Corpo de Texto:** Peso 400, `line-height: 1.6`.
-* **Dados Técnicos / Tags:** `JetBrains Mono` ou `Fira Code` (para nomes de tecnologias e métricas).
+* **Famílias Tipográficas:**
+  * **Display & Corpo de Texto:** `Plus Jakarta Sans` (Google Fonts), pesos 400, 600, 700 e 800.
+  * **Dados Técnicos, Tags & Código:** `JetBrains Mono` (Google Fonts), peso 500 / 600.
 * **Bordas Arredondadas (Radius):**
-  * Botões e Badges: `50px` (estilo pílula suave) ou `8px`.
-  * Cards e Containers: `16px`.
-  * Modais e Mockup Frames: `20px`.
+  * Botões e Badges: `50px` (estilo pílula suave).
+  * Cards e Containers: `16px` a `24px`.
+  * Modais e Mockup Frames: `20px` a `32px`.
