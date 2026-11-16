@@ -59,6 +59,12 @@
   --transition-fast: 150ms ease-in-out;
   --transition-normal: 250ms ease-in-out;
   --transition-slow: 400ms cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Scrollbar Auto-Hide (Gradiente "interfaces elegantes": #d0bcff -> #efb0ff -> #f1afff) */
+  --scrollbar-size: 8px;
+  --scrollbar-grad-scrolling: linear-gradient(180deg, rgba(208, 188, 255, 0.48) 0%, rgba(239, 176, 255, 0.48) 50%, rgba(241, 175, 255, 0.48) 100%);
+  --scrollbar-grad-hover: linear-gradient(180deg, rgba(208, 188, 255, 0.72) 0%, rgba(239, 176, 255, 0.72) 50%, rgba(241, 175, 255, 0.72) 100%);
+  --scrollbar-grad-active: linear-gradient(180deg, rgba(208, 188, 255, 0.90) 0%, rgba(239, 176, 255, 0.90) 50%, rgba(241, 175, 255, 0.90) 100%);
 }
 
 /* Classe utilitária para testar a Variante Orchid */

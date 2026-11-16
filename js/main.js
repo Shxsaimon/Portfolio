@@ -1,6 +1,6 @@
 /**
  * Saimon Furigo — Portfolio Interactivity
- * Handlers: Device Switcher, Carousel Navigation, Clipboard Copy, Desktop Magnifier, Project Modal
+ * Handlers: Device Switcher, Carousel Navigation, Clipboard Copy, Desktop Magnifier, Project Modal, Auto-hide Scrollbar
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initClipboardEmail();
   initDesktopMagnifier();
   initProjectModal();
+  initAutoHideScrollbar();
 });
 
 /**
@@ -233,6 +234,172 @@ function initProjectModal() {
   modal.addEventListener('click', (e) => {
     if (e.target === modal) {
       closeModal(e);
+    }
+  });
+}
+
+/**
+ * 6. Controle de Visibilidade Dinâmica da Barra de Rolagem (Auto-hide Scrollbar)
+ * Baseado no padrão do Symo Finance com interpolação via CSS Houdini
+ */
+function initAutoHideScrollbar() {
+  const activeScrollTimers = new WeakMap();
+  let currentHoverTarget = null;
+  let hoverTimer = null;
+
+  const isRootTarget = (el) => (
+    !el || el === document || el === document.documentElement || el === document.body
+  );
+
+  const setRootScrolling = (active) => {
+    document.documentElement.classList.toggle('is-scrolling', active);
+    if (document.body) {
+      document.body.classList.toggle('is-scrolling', active);
+    }
+  };
+
+  const deactivateScrollbar = (element) => {
+    if (!element) return;
+    if (isRootTarget(element)) {
+      setRootScrolling(false);
+    } else if (element.classList) {
+      element.classList.remove('is-scrolling');
+    }
+    const key = isRootTarget(element) ? document.documentElement : element;
+    const timer = activeScrollTimers.get(key);
+    if (timer) {
+      clearTimeout(timer);
+      activeScrollTimers.delete(key);
+    }
+  };
+
+  const activateScrollbar = (element, duration = 1200) => {
+    if (!element) return;
+    const isRoot = isRootTarget(element);
+    const key = isRoot ? document.documentElement : element;
+
+    if (isRoot) {
+      setRootScrolling(true);
+    } else if (element.classList) {
+      element.classList.add('is-scrolling');
+    }
+
+    const existingTimer = activeScrollTimers.get(key);
+    if (existingTimer) {
+      clearTimeout(existingTimer);
+    }
+
+    const newTimer = setTimeout(() => {
+      if (currentHoverTarget !== key) {
+        if (isRoot) {
+          setRootScrolling(false);
+        } else if (element.classList) {
+          element.classList.remove('is-scrolling');
+        }
+        activeScrollTimers.delete(key);
+      }
+    }, duration);
+
+    activeScrollTimers.set(key, newTimer);
+  };
+
+  // Ativa a scrollbar ao rolar a página (mouse, teclado, barra ou toque) ou container interno
+  window.addEventListener('scroll', (event) => {
+    const target = isRootTarget(event.target) ? document.documentElement : event.target;
+    activateScrollbar(target, 1200);
+  }, { capture: true, passive: true });
+
+  // Localiza um container interno rolável (como a área interna do modal)
+  const findInnerScrollable = (target) => {
+    let el = target;
+    while (el && el !== document && el !== document.documentElement && el !== document.body) {
+      const style = window.getComputedStyle(el);
+      const canScrollY = (style.overflowY === 'auto' || style.overflowY === 'scroll') && el.scrollHeight > el.clientHeight;
+      if (canScrollY) {
+        return el;
+      }
+      el = el.parentElement;
+    }
+    return null;
+  };
+
+  // Ativa a scrollbar instantaneamente ao girar a roda do mouse
+  window.addEventListener('wheel', (event) => {
+    const inner = findInnerScrollable(event.target);
+    activateScrollbar(inner || document.documentElement, 1200);
+  }, { passive: true });
+
+  // Ativa a scrollbar ao navegar pelo teclado (Setas, PageUp/Down, Espaço, Home/End)
+  window.addEventListener('keydown', (event) => {
+    const scrollKeys = ['ArrowDown', 'ArrowUp', 'PageDown', 'PageUp', ' ', 'Home', 'End'];
+    if (scrollKeys.includes(event.key)) {
+      const inner = findInnerScrollable(event.target);
+      activateScrollbar(inner || document.documentElement, 1200);
+    }
+  }, { passive: true });
+
+  // Monitora a posição do cursor: ativa ao aproximar e manter o mouse na calha lateral direita
+  document.addEventListener('mousemove', (event) => {
+    const inner = findInnerScrollable(event.target);
+    let targetScrollable = null;
+    let isNearScrollbar = false;
+
+    if (inner) {
+      const rect = inner.getBoundingClientRect();
+      if (
+        event.clientX >= rect.right - 18 &&
+        event.clientX <= rect.right &&
+        event.clientY >= rect.top &&
+        event.clientY <= rect.bottom
+      ) {
+        targetScrollable = inner;
+        isNearScrollbar = true;
+      }
+    }
+
+    // Se não estiver na barra de um modal interno, verifica a borda direita da janela principal
+    if (!isNearScrollbar && event.clientX >= window.innerWidth - 18) {
+      targetScrollable = document.documentElement;
+      isNearScrollbar = true;
+    }
+
+    if (isNearScrollbar && targetScrollable) {
+      currentHoverTarget = targetScrollable;
+
+      if (targetScrollable.classList.contains('is-scrolling')) {
+        return;
+      }
+
+      if (!hoverTimer) {
+        hoverTimer = setTimeout(() => {
+          if (currentHoverTarget === targetScrollable) {
+            activateScrollbar(targetScrollable, 2500);
+          }
+          hoverTimer = null;
+        }, 220);
+      }
+    } else {
+      if (hoverTimer) {
+        clearTimeout(hoverTimer);
+        hoverTimer = null;
+      }
+      if (currentHoverTarget) {
+        const prev = currentHoverTarget;
+        currentHoverTarget = null;
+        activateScrollbar(prev, 250);
+      }
+    }
+  }, { passive: true });
+
+  // Esconde ao tirar o mouse da janela
+  document.addEventListener('mouseleave', () => {
+    if (hoverTimer) {
+      clearTimeout(hoverTimer);
+      hoverTimer = null;
+    }
+    if (currentHoverTarget) {
+      deactivateScrollbar(currentHoverTarget);
+      currentHoverTarget = null;
     }
   });
 }

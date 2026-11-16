@@ -13,13 +13,125 @@ html {
   color: #f4f0ea;
 }
 
+/* ==========================================================================
+   Padrão Global de Barras de Rolagem (Scrollbars) — Obsidian Kinetic
+   Auto-hide com transição suave via CSS Houdini (@property)
+   Gradiente "interfaces elegantes": #d0bcff (0%) -> #efb0ff (50%) -> #f1afff (100%)
+   ========================================================================== */
+
+/* Registro das 3 paradas de cor animáveis do gradiente para interpolação no Chromium */
+@property --sb-stop-1 {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: rgba(208, 188, 255, 0);
+}
+
+@property --sb-stop-2 {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: rgba(239, 176, 255, 0);
+}
+
+@property --sb-stop-3 {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: rgba(241, 175, 255, 0);
+}
+
+/* 1. Chromium / WebKit (Chrome, Edge, Opera, Safari) */
+* {
+  --sb-stop-1: rgba(208, 188, 255, 0);
+  --sb-stop-2: rgba(239, 176, 255, 0);
+  --sb-stop-3: rgba(241, 175, 255, 0);
+  transition:
+    --sb-stop-1 0.45s ease-in-out,
+    --sb-stop-2 0.45s ease-in-out,
+    --sb-stop-3 0.45s ease-in-out;
+}
+
+*.is-scrolling,
+html.is-scrolling,
+html.is-scrolling body,
+body.is-scrolling {
+  --sb-stop-1: rgba(208, 188, 255, 0.48);
+  --sb-stop-2: rgba(239, 176, 255, 0.48);
+  --sb-stop-3: rgba(241, 175, 255, 0.48);
+  transition:
+    --sb-stop-1 0.45s ease-in-out,
+    --sb-stop-2 0.45s ease-in-out,
+    --sb-stop-3 0.45s ease-in-out;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-button {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent !important;
+}
+
+*::-webkit-scrollbar-track-piece {
+  background: transparent !important;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--sb-stop-1) 0%, var(--sb-stop-2) 50%, var(--sb-stop-3) 100%);
+  border-radius: 9999px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    180deg,
+    rgba(208, 188, 255, 0.72) 0%,
+    rgba(239, 176, 255, 0.72) 50%,
+    rgba(241, 175, 255, 0.72) 100%
+  ) !important;
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background: linear-gradient(
+    180deg,
+    rgba(208, 188, 255, 0.90) 0%,
+    rgba(239, 176, 255, 0.90) 50%,
+    rgba(241, 175, 255, 0.90) 100%
+  ) !important;
+}
+
+*::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+/* 2. Firefox (Gecko) */
+@supports (-moz-appearance: none) {
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+    transition: scrollbar-color 0.45s ease-in-out;
+  }
+
+  *.is-scrolling,
+  html.is-scrolling,
+  html.is-scrolling body,
+  body.is-scrolling {
+    scrollbar-color: rgba(239, 176, 255, 0.48) transparent;
+    transition: scrollbar-color 0.45s ease-in-out;
+  }
+}
+
 /* Ocultar barra de rolagem padrão no carrossel mantendo o scroll funcional */
 .no-scrollbar::-webkit-scrollbar {
-  display: none;
+  display: none !important;
 }
 .no-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
 }
 
 /* Efeito de Vidro Fosco (Glassmorphism) */
